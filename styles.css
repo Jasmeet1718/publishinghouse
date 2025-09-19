@@ -1,0 +1,325 @@
+/* CSS Variables matching ideaMelon brand colors */
+:root {
+  --primary: #e67e22; /* Orange from melon */
+  --secondary: #27ae60; /* Green from leaf */
+  --accent: #8b4513; /* Maroon from text */
+  --background: #ffffff;
+  --foreground: #2c3e50;
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --card: #ffffff;
+  --border: #e9ecef;
+  --input: #ffffff;
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--background) 0%, var(--muted) 30%, rgba(230, 126, 34, 0.05) 100%);
+  color: var(--foreground);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.content {
+  max-width: 42rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-balance: balance;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-balance: balance;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  max-width: 32rem;
+  margin: 0 auto;
+  text-pretty: pretty;
+  line-height: 1.6;
+}
+
+.signup-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(233, 236, 239, 0.5);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.email-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--input);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+.submit-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background: #d35400;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.form-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(39, 174, 96, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--secondary);
+}
+
+.success-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.success-description {
+  color: var(--muted-foreground);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon-primary {
+  background: rgba(230, 126, 34, 0.1);
+}
+
+.feature-icon-secondary {
+  background: rgba(39, 174, 96, 0.1);
+}
+
+.feature-icon-accent {
+  background: rgba(139, 69, 19, 0.1);
+}
+
+.feature-icon .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.feature-icon-primary .icon {
+  color: var(--primary);
+}
+
+.feature-icon-secondary .icon {
+  color: var(--secondary);
+}
+
+.feature-icon-accent .icon {
+  color: var(--accent);
+}
+
+.feature-title {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.feature-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-pretty: pretty;
+}
+
+.footer {
+  padding-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .form-group {
+    flex-direction: row;
+  }
+
+  .email-input {
+    flex: 1;
+  }
+
+  .submit-btn {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+  }
+
+  .signup-card {
+    padding: 1.5rem;
+  }
+}
